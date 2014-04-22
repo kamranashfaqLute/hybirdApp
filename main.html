@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Healthy.pk - Pakistan Health/Medical Website</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS & jQuery//-->
+		<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.2.min.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	 
+		<script src="js/jquery.js"></script>
+	 	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+        <!-- CSS & jQuery//-->
+   <!-- Slide Page Code //-->
+   	<script>
+		$( document ).on( "pagecreate", "#main-page", function() {
+
+			$( document ).on( "swipeleft swiperight", "#main-page", function( e ) {
+				// We check if there is no open panel on the page because otherwise
+				// a swipe to close the left panel would also open the right panel (and v.v.).
+				// We do this by checking the data that the framework stores on the page element (panel: open).
+				if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+					if ( e.type === "swipeleft" ) {
+						$( "#right-panel" ).panel( "open" );
+					} else if ( e.type === "swiperight" ) {
+						$( "#left-panel" ).panel( "open" );
+					}
+				}
+			});
+		});
+    </script>
+	<style>
+		/* Swipe works with mouse as well but often causes text selection. */
+		#main-page * {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+		}
+		/* Content styling. */
+		dl { font-family: "Times New Roman", Times, serif; padding: 1em; }
+		dt { font-size: 2em; font-weight: bold; }
+		dt span { font-size: .5em; color: #777; margin-left: .5em; }
+		dd { font-size: 1.25em;	margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+		.back-btn { float: right; margin: 0 2em 1em 0; }
+	</style>
+   
+   <!-- slide Page Code end //-->
+   
+   
+   
+   
+</head>
+
+<body>
+
+
+<div data-role="page" id="main-page" data-url="main-page">
+    <div data-role="header" data-theme="a">
+       <div class="splash" align="center"  >
+        <img src="img/logo.png" alt="splash" />
+    	</div>
+        <h2>Pakistan Health/Medical Mobile App</h2>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-bars">Open left panel</a>
+        <a href="#right-panel" data-icon="eye" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-eye">Open right panel</a>
+    </div><!-- /header -->
+    <div role="main" class="ui-content" >
+         
+          <!-- Dashboard Grid-->
+    <div class="ui-grid-b">
+   
+    <div class="ui-block-a" align="center"> 
+    <a href="items.html" id="consultant">
+    <img src="http://healthee.pk/images/directory/dir_consultants.png" alt="Consultants" />
+    <br  />Consultants
+    </a>
+    </div>
+    <div class="ui-block-b" align="center">
+    <a href="#Dentist" id="Dentist">
+    <img src="http://healthee.pk/images/directory/dir_dentist.png" alt="Dentist" />
+    <br  />Dentist / Dental Clinics
+    </a>
+    </div>
+    <div class="ui-block-c" align="center"><img src="http://healthee.pk/images/directory/dir_hospital.png" alt="Hospitals" />
+    <br  />Hospitals</div>
+    <div class="ui-block-a" align="center"><img src="http://healthee.pk/images/directory/dir_clinics.png" alt="Consultants" />
+    <br  />Clinics</div>
+    <div class="ui-block-b" align="center"><img src="http://healthee.pk/images/directory/dir_emerbency.png" alt="Consultants" />
+    <br  />Emergency Units</div>
+    <div class="ui-block-c" align="center"><img src="http://healthee.pk/images/directory/dir_ambulance.png" alt="Consultants" />
+    <br  />Ambulance Services</div>
+    <div class="ui-block-a" align="center"><img src="http://healthee.pk/images/directory/dir_bloodbank.png" alt="Consultants" />
+    <br  />Blood Banks</div>
+    <div class="ui-block-b" align="center"><img src="http://healthee.pk/images/directory/dir_nursing.jpg" alt="Consultants" />
+    <br  />Nursing Schools</div>
+   
+	</div>
+<!-- /grid-c -->
+        
+        
+      <!--  <a href="#demo-intro" data-rel="back" class="back-btn ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-back ui-btn-icon-right">Back </a>-->
+  
+     
+      
+    </div><!-- /content -->
+    <div data-role="panel" id="left-panel" data-theme="b">
+    <div align="left">
+   
+   
+    <ul data-role="listview">
+            <li>Healthy.pk</li>
+            <li>Directory</li>
+            <li>Health A-Z</li>
+            <li>Healthy Living</li>
+            <li>Alternative Medicines</li>
+            <li>Now Trending</li>
+            
+          </ul>
+          <br />
+     <!-- <a href="#" data-rel="close" 
+    class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right"  >Close</a> -->    
+    </div>
+  
+      
+    </div>
+    <div align="left"><!-- /panel -->
+    </div>
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="a">
+      <p>Right push panel.</p>
+       <!-- <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right">Close</a>-->
+    </div><!-- /panel -->
+    <div data-role="footer">
+		<h5>© 2013, Healthee.pk</h5>
+	</div><!-- /footer -->
+    
+</div>
+
+
+
+
+
+ 
+</body>
+</html>
